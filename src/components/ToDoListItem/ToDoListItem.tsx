@@ -2,10 +2,14 @@ import { Typography } from "@mui/material";
 
 import styles from "./ToDoListItem.module.scss";
 
-const ToDoListItem = () => {
+interface ToDoListItemProps {
+    label: string;
+}
+
+const ToDoListItem = ({ label }: ToDoListItemProps) => {
     return (
         <div className={styles.ToDoListItem}>
-            <Typography variant="h5">ToDoItem</Typography>
+            <Typography variant="h5">{label}</Typography>
         </div>
     );
 };
