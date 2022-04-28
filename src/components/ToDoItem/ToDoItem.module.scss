@@ -1,0 +1,19 @@
+.ToDoItem {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(234, 252, 255, 1) 100%
+    );
+}
+
+.done {
+    text-decoration: line-through;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(252, 234, 255, 1) 100%
+    );
+}

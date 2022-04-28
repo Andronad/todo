@@ -1,11 +1,14 @@
-import { Stack } from "@mui/material";
+import { Container } from "@mui/material";
 import Header from "../Header";
+import ToDoList from "./../ToDoList/ToDoList";
+import { list } from "./../../constants/index";
 
 function App() {
     return (
-        <Stack direction={"column"} textAlign="center">
+        <Container maxWidth="xs">
             <Header />
-        </Stack>
+            <ToDoList list={list} />
+        </Container>
     );
 }
 
