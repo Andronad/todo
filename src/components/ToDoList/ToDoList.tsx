@@ -1,6 +1,5 @@
 import { Stack } from "@mui/material";
 import ToDoItem from "../ToDoItem/ToDoItem";
-import { IToDoItem } from "./../../types/index";
 
 interface ToDoListProps {
     list: IToDoItem[];

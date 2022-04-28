@@ -1,5 +1,3 @@
-import { IToDoItem } from "./../types/index";
-
 export const list: IToDoItem[] = [
     {
         id: 1,

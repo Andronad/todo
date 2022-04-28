@@ -1,16 +1,16 @@
 interface IToDoItem {
     id?: number;
-    name: string;
+    label: string;
     done: boolean;
 }
 
-interface ITODoState {
+type ToDoState = {
     todos: IToDoItem[];
-}
+};
 
-interface IToDoAction {
+type ToDoAction<T> = {
     type: string;
-    payload?: string;
-}
+    payload?: T;
+};
 
-type DispatchType = (args: IToDoAction) => IToDoAction;
+type DispatchType = (args: ToDoAction) => ToDoAction;

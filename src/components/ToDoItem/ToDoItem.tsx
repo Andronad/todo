@@ -1,6 +1,5 @@
 import { Typography } from "@mui/material";
 
-import { IToDoItem } from "../../types/index";
 import styles from "./ToDoItem.module.scss";
 
 interface ToDoItemProps {

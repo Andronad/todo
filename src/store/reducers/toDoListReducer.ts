@@ -1,18 +1,18 @@
 import * as actionTypes from "../actionTypes";
 
 const initialTodos: IToDoItem[] = [
-    { id: 1, name: "Create app", done: false },
-    { id: 2, name: "Visit pekar in army", done: false },
-    { id: 3, name: "Trip to the dacha", done: false },
+    { id: 1, label: "Create app", done: false },
+    { id: 2, label: "Visit pekar in army", done: false },
+    { id: 3, label: "Trip to the dacha", done: false },
 ];
 
-const initialState: ITODoState = {
+const initialState: ToDoState = {
     todos: [],
 };
 
 const toDoListReducer = (
-    state: ITODoState = initialState,
-    action: IToDoAction
+    state: ToDoState = initialState,
+    action: ToDoAction<any>
 ) => {
     switch (action.type) {
         case actionTypes.LOAD_TODOS:
@@ -23,7 +23,7 @@ const toDoListReducer = (
         case actionTypes.ADD_TODO:
             const newTodo: IToDoItem = {
                 id: Math.random(),
-                name: action.payload || "",
+                label: action.payload || "",
                 done: false,
             };
             return {
@@ -31,6 +31,7 @@ const toDoListReducer = (
                 todos: state.todos.concat(newTodo),
             };
     }
+    return state;
 };
 
 export default toDoListReducer;
