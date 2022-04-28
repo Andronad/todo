@@ -1,12 +1,17 @@
 import { Stack } from "@mui/material";
-import ToDoListItem from "./../ToDoListItem/ToDoListItem";
+import ToDoItem from "../ToDoItem/ToDoItem";
+import { IToDoItem } from "./../../types/index";
 
-const ToDoList = () => {
+interface ToDoListProps {
+    list: IToDoItem[];
+}
+
+const ToDoList = ({ list }: ToDoListProps) => {
     return (
         <Stack direction={"column"} textAlign="center" spacing={1}>
-            <ToDoListItem label={"item 1"} />
-            <ToDoListItem label={"item 2"} />
-            <ToDoListItem label={"item 3"} />
+            {list.map((e) => {
+                return <ToDoItem item={e} />;
+            })}
         </Stack>
     );
 };
