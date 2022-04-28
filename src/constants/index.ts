@@ -16,4 +16,9 @@ export const list: IToDoItem[] = [
         label: "Achieve money independence",
         done: false,
     },
+    {
+        id: 4,
+        label: "Become a good programist on a CARS project",
+        done: true,
+    },
 ];

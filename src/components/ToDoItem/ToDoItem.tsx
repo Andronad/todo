@@ -8,8 +8,12 @@ interface ToDoItemProps {
 }
 
 const ToDoItem = ({ item }: ToDoItemProps) => {
+    const classes: string = item.done
+        ? `${styles.ToDoItem} ${styles.done}`
+        : `${styles.ToDoItem}`;
+
     return (
-        <div className={styles.ToDoListItem} key={item.id}>
+        <div className={classes}>
             <Typography variant="h5">{item.label}</Typography>
         </div>
     );

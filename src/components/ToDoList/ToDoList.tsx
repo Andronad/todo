@@ -10,7 +10,7 @@ const ToDoList = ({ list }: ToDoListProps) => {
     return (
         <Stack direction={"column"} textAlign="center" spacing={1}>
             {list.map((e) => {
-                return <ToDoItem item={e} />;
+                return <ToDoItem item={e} key={e.id} />;
             })}
         </Stack>
     );
