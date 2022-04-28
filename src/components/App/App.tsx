@@ -1,16 +1,12 @@
-import { Container, Stack } from "@mui/material";
+import { Container } from "@mui/material";
 import Header from "../Header";
-import ToDoListItem from "../ToDoListItem";
+import ToDoList from "./../ToDoList/ToDoList";
 
 function App() {
     return (
         <Container maxWidth="xs">
-            <Stack direction={"column"} textAlign="center" spacing={1}>
-                <Header />
-                <ToDoListItem label={"item 1"} />
-                <ToDoListItem label={"item 2"} />
-                <ToDoListItem label={"item 3"} />
-            </Stack>
+            <Header />
+            <ToDoList />
         </Container>
     );
 }
