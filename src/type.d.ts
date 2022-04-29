@@ -6,6 +6,7 @@ interface IToDoItem {
 
 type ToDoState = {
     todos: IToDoItem[];
+    filter: string;
 };
 
 type ToDoAction<T> = {

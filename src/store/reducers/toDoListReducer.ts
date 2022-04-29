@@ -30,6 +30,7 @@ const initialTodos: IToDoItem[] = [
 
 const initialState: ToDoState = {
     todos: [],
+    filter: "",
 };
 
 const toDoListReducer = (
@@ -69,6 +70,11 @@ const toDoListReducer = (
             return {
                 ...state,
                 todos: newStateTodos,
+            };
+        case actionTypes.UPDATE_FILTER:
+            return {
+                ...state,
+                filter: action.payload,
             };
     }
     return state;

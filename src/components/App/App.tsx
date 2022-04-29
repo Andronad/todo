@@ -18,7 +18,7 @@ const App = () => {
         <Container maxWidth="xs">
             <Header />
             <SearchForm />
-            <ToDoList list={list} />
+            <ToDoList />
         </Container>
     );
 };

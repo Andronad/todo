@@ -19,3 +19,10 @@ export const toggleDoneToDo = (id: number): ToDoAction<number> => {
         payload: id,
     };
 };
+
+export const updateFilter = (newFilter: string): ToDoAction<string> => {
+    return {
+        type: ActionTypes.UPDATE_FILTER,
+        payload: newFilter,
+    };
+};
