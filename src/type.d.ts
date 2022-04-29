@@ -1,5 +1,5 @@
 interface IToDoItem {
-    id?: number;
+    id: number;
     label: string;
     done: boolean;
 }
