@@ -1,8 +1,8 @@
-export const f = "f";
-// import { createStore, Store } from "redux";
-// import toDoListReducer from "./reducers/toDoListReducer";
+import toDoListReducer from "./reducers/toDoListReducer";
+import { createStore } from "redux";
+import { Store } from "redux";
 
-// const store: Store<ITODoState, IToDoAction> & { dispatch: DispatchType } =
-//     createStore(toDoListReducer);
+const store: Store<ToDoState, ToDoAction<any>> & { dispatch: DispatchType } =
+    createStore(toDoListReducer);
 
-// export default store;
+export default store;

@@ -1,12 +1,10 @@
 import { Stack } from "@mui/material";
 import ToDoItem from "../ToDoItem/ToDoItem";
-import { IToDoItem } from "./../../types/index";
+import { useSelector } from "react-redux";
 
-interface ToDoListProps {
-    list: IToDoItem[];
-}
+const ToDoList = () => {
+    const list: IToDoItem[] = useSelector((state: ToDoState) => state.todos);
 
-const ToDoList = ({ list }: ToDoListProps) => {
     return (
         <Stack direction={"column"} textAlign="center" spacing={1}>
             {list.map((e) => {
