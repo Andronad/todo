@@ -1,6 +1,7 @@
 import { Container } from "@mui/material";
 import Header from "../Header";
 import ToDoList from "./../ToDoList/ToDoList";
+import SearchForm from "../SearchForm";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { Dispatch } from "redux";
@@ -16,7 +17,8 @@ const App = () => {
     return (
         <Container maxWidth="xs">
             <Header />
-            <ToDoList />
+            <SearchForm />
+            <ToDoList list={list} />
         </Container>
     );
 };
